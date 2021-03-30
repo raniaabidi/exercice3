@@ -5,18 +5,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="coffeeservlet" methode="post">
-    <table>
-    <tr><td>
-  <label>votre recherche :  </label></td>
-      <td>  <input type="text" name="n" value="" ></td></tr><br>
-   <tr><td><label>moteur de recherche :  </label></td>
-      <td> <select name="s" size="1">
-       <option>GOOGLE</option>
-       <option>YAHOO</option>
-       </select></td></tr><br>
-    <tr><td><input type="submit" value="chercher"></td>   
-    </table> 
+<form action="searchservlet" method="post">
+   <pre>
+  <label><b>votre recherche :  </b></label>
+     <input type="text" name="search" > <br>
+   <label><b>moteur de recherche :  </b></label>
+     <select name="moteur" size="1">
+       <option value="g">GOOGLE</option>
+       <option value="y">YAHOO</option>
+       </select><br>
+  <input type="submit" value="chercher">
+  </pre>  
  </form>
 </body>
 </html>

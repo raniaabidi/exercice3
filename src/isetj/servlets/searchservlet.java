@@ -29,19 +29,14 @@ public class searchservlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String n=request.getParameter("n");
-		String s=request.getParameter("s");
-		PrintWriter out=response.getWriter();
-		out.println("<html><head>");
-		out.println("<title>search</title></head>");
-		out.println("<p><i>votre recherche : </i></p>");
-		out.println(" <input type='tex' name='n' value='' >");
-		out.println(" <label>moteur de recherche :  </label>");
-		out.println(" <select name='s' size='1'> <option>GOOGLE</option>   <option>YAHOO</option>  </select>");
-		out.println(" <input type='submit' value='chercher'>");
-		out.println("</body></html>");
-		
-		response.sendRedirect("googl/");
+		String search=request.getParameter("search");
+		String moteur=request.getParameter("moteur");
+if (moteur.equals("g")) {
+	response.sendRedirect("http://www.google.com/search?q="+search);
+}
+else {
+	response.sendRedirect("http://search.yahoo.com/search?p="+search);
+}
 	}
 
 	/**
